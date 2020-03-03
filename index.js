@@ -21,7 +21,7 @@ app.get("/db", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send({ user: 1 });
+  res.send({ users: 1 });
 });
 
 const PORT = process.env.PORT || 5000;
