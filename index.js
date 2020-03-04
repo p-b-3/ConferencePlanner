@@ -7,9 +7,9 @@ const app = express();
 
 
 
-// app.get("/", (req, res) => {
-//   res.send({ users: 1 });
-// });
+app.get("/", (req, res) => {
+  res.send("Welcome to Conference Planner")
+});
 
 // app.get("/db", async (req, res) => {
 //   try {
@@ -24,7 +24,7 @@ const app = express();
 //   }
 // });
 
-app.get("/", db.getConferences)
+app.get("/api/conferences", db.getConferences)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
