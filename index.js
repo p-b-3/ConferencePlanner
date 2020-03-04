@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 //   }
 // });
 
-app.get("api/conferences", db.getConferences)
+app.get("/api/conferences", db.getConferences)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
