@@ -52,7 +52,7 @@ const updateConference = (request, response) => {
   )
 }
 
-const deleteConferences = (request, response) => {
+const deleteConference = (request, response) => {
   const id = parseInt(request.params.id)
 
   pool.query('DELETE FROM conferences_test3 WHERE id = $1', [id], (error, results) => {
