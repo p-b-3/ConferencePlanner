@@ -25,10 +25,10 @@ app.get("/", (req, res) => {
 // });
 
 app.get("/api/conferences", db.getConferences)
-app.get('/api/conferences/:id', db.getConferencesById)
-app.post('/api/conferences', db.createUser)
-app.put('/api/conferences/:id', db.updateUser)
-app.delete('/api/conferences/:id', db.deleteUser)
+app.get('/api/conferences/:id', db.getConferenceById)
+app.post('/api/conferences', db.createConference)
+app.put('/api/conferences/:id', db.updateConference)
+app.delete('/api/conferences/:id', db.deleteConference)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
