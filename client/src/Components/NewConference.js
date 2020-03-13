@@ -36,10 +36,7 @@ class NewConference extends Component {
     });
   }
 
-  // onInputChange = (e) => {
-  //   this.setState({ name: e.target.value});
-  //   console.log(this.state);
-  // }
+
   onInputChange = (event) => {
     const value =  event.target.value;
     const name = event.target.name;

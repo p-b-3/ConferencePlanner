@@ -1,12 +1,4 @@
 import React, { Component } from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link,
-//   useParams
-// } from "react-router-dom";
-
 import axios from "axios";
 const queryString = require('query-string');
 
