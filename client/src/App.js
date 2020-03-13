@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   fechConferences = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/events/?format=json");
+    const res = await axios.get("/api/conferences");
     this.setState({ conferenceList: res.data });
     // console.log(this.state);
   };
