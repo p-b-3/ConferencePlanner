@@ -19,7 +19,7 @@ class ConferenceDetail extends Component {
 
 
   componentDidMount() {
-
+    console.log(this.props.match.params.id)
     this.fetchConference(this.props.match.params.id);
     console.log(this.state)
 
@@ -28,7 +28,7 @@ class ConferenceDetail extends Component {
 
   fetchConference = async (id) => {
     const res = await axios.get(
-      `api/conferences/${id}`
+      `/api/conferences/${id}`
     );
     this.setState({ conference: res.data });
 
