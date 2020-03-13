@@ -28,11 +28,11 @@ class ConferenceDetail extends Component {
 
   fetchConference = async (id) => {
     const res = await axios.get(
-      `/api/conferences/${id}`
+      "/api/conferences/" + id
     );
     this.setState({ conference: res });
-
   };
+
 
   render() {
     return (
