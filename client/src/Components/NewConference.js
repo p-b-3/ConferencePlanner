@@ -65,7 +65,7 @@ class NewConference extends Component {
 
             <label>Start Date</label>
             <input
-              type="date"
+              type="text"
               value={this.state.startdate}
               name = "startdate"
               onChange = {this.onInputChange}
@@ -100,7 +100,7 @@ class NewConference extends Component {
             <input
               type="number"
               value={this.state.attendance_goal}
-              name = "attendance_goal"
+              name = "attendance_current"
               onChange = {this.onInputChange}
             />
 
@@ -199,11 +199,6 @@ class NewConference extends Component {
               name = "te_lead"
               onChange = {this.onInputChange}
             />
-
-
-
-
-
 
 
 
