@@ -5,6 +5,7 @@ const pool = new Pool({
 });
 
 
+
 const getConferences = (req, res) => {
   pool.query('SELECT * FROM conferences_test3', (error, results) => {
     if (error) {
@@ -28,7 +29,7 @@ const getConferenceById = (request, response) => {
 const createConference = (request, response) => {
   const { name, email } = request.body
 
-  pool.query('INSERT INTO conferences_test3 (name, email) VALUES ($1, $2)', [name, email], (error, results) => {
+  pool.query('INSERT INTO conferences_test3 (title, sales_goal, sales_current,  attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead, startdate) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)', [title, sales_goal, sales_current,  attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead, startdate], (error, results) => {
     if (error) {
       throw error
     }
