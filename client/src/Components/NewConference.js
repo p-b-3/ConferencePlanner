@@ -6,10 +6,10 @@ import Button from 'react-bootstrap/Button'
 class NewConference extends Component {
   state = {
     title: "",
-    sales_goal: "",
-    sales_current: "",
-    attendance_goal: "",
-    attendance_current: "",
+    sales_goal: 0,
+    sales_current: 0,
+    attendance_goal: 0,
+    attendance_current: 0,
     oc_call_compelted: "",
     website_compelted: "",
     prospectus_compelted: "",
