@@ -30,11 +30,10 @@ class ConferenceDetail extends Component {
     const res = await axios.get(
       `/api/conferences/${this.props.match.params.id}`
     );
-    console.log(res)
     console.log(res.data[0])
-    console.log(res.data)
-    console.log(res.data.title)
-    this.setState({ conference: res.data });
+
+    this.setState({ conference: res.data[0] });
+    console.log(this.state)
   };
 
 
