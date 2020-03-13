@@ -31,7 +31,9 @@ class ConferenceDetail extends Component {
       `/api/conferences/${this.props.match.params.id}`
     );
     console.log(res)
-    this.setState({ conference: res["data"] });
+    console.log(res.dada)
+    console.log(res.data.title)
+    this.setState({ conference: res.data });
   };
 
 
