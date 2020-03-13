@@ -8,15 +8,17 @@ const Conferences = (props) => (
   <table className="ui celled striped table">
     <thead>
       <tr><th>Conference</th>
-      <th>Location</th>
-      <th>Priority Level</th>
+      <th>Start Date</th>
+      <th>Current Sales</th>
+      <th>Sales Goal</th>
     </tr></thead>
     <tbody>
     {props.conferenceList.map(conference => (
     <tr key= {conference.id}>
       <td data-label="Name" ><a href ={'/conferences/' + conference.id}>{conference.title}</a></td>
-      <td data-label="Age">{conference.location}</td>
-      <td data-label="Job">{conference.priority_level}</td>
+      <td data-label="Age">{conference.startdate}</td>
+      <td data-label="Job">{conference.sales_current}</td>
+      <td data-label="Job">{conference.sales_goal}</td>
     </tr>
     ))}
     </tbody>
