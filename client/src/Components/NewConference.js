@@ -27,7 +27,7 @@ class NewConference extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault()
-    axios.post("api/conferences",
+    axios.post("/api/conferences",
     this.state).then((response) => {
     console.log(response);
 
