@@ -27,7 +27,7 @@ class ConferenceDetail extends Component {
 
   fetchConference = async (id) => {
     const res = await axios.get(
-      `http://127.0.0.1:8000/events/${id}?format=json`
+      `api/conferences/${id}`
     );
     this.setState({ conference: res.data });
 

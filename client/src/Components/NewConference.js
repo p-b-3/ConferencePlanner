@@ -11,7 +11,7 @@ class NewConference extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault()
-    axios.post("http://127.0.0.1:8000/events/people?format=json",
+    axios.post("api/conferences",
     this.state).then((response) => {
     console.log(response);
 
@@ -54,7 +54,7 @@ class NewConference extends Component {
               name = "email"
               onChange = {this.onInputChange}
             />
-            
+
             <button className="ui green button">Submit</button>
           </form>
         </div>

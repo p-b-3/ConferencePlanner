@@ -7,9 +7,6 @@ const app = express();
 
 
 
-app.get("/", (req, res) => {
-  res.send("Welcome to Conference Planner")
-});
 
 // app.get("/db", async (req, res) => {
 //   try {
