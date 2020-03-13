@@ -28,7 +28,7 @@ class ConferenceDetail extends Component {
 
   fetchConference = async (id) => {
     const res = await axios.get(
-      "/api/conferences/" + id
+      `/api/conferences/${this.props.match.params.id}`
     );
     this.setState({ conference: res });
   };
