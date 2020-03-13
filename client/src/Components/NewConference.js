@@ -99,7 +99,7 @@ class NewConference extends Component {
             <label>Attendance Goal</label>
             <input
               type="number"
-              value={this.state.attendance_current}
+              value={this.state.attendance_goal}
               name = "attendance_current"
               onChange = {this.onInputChange}
             />
