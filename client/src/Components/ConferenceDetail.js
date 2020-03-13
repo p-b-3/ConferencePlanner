@@ -30,7 +30,7 @@ class ConferenceDetail extends Component {
     const res = await axios.get(
       `/api/conferences/${id}`
     );
-    this.setState({ conference: res.data });
+    this.setState({ conference: res });
 
   };
 
