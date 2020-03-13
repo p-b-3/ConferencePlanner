@@ -59,7 +59,7 @@ class NewConference extends Component {
             <input
               type="text"
               value={this.state.title}
-              name = "name"
+              name = "title"
               onChange = {this.onInputChange}
             />
 
