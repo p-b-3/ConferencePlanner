@@ -21,6 +21,7 @@ class ConferenceDetail extends Component {
   componentDidMount() {
 
     this.fetchConference(this.props.match.params.id);
+    console.log(this.state)
 
   }
 
