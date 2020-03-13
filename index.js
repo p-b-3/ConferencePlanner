@@ -30,5 +30,16 @@ app.post('/api/conferences', db.createConference)
 app.put('/api/conferences/:id', db.updateConference)
 app.delete('/api/conferences/:id', db.deleteConference)
 
+if (process.env.NODE_ENV == "production") {
+  // Express to serve up production assets if specific file matches with what that request is looking for- mains.js or main.class if cant file in rotues above
+  app.use(express.static("client/build"));
+
+  // Express to serve up index.html if it does not recognize the route
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
