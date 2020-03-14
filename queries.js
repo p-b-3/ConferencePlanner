@@ -27,13 +27,13 @@ const getConferenceById = (request, response) => {
 }
 
 const createConference = (request, response) => {
-  // const { title, sales_goal, sales_current,  attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead } = request.body
-  const data = {
-    title: request.body.title,
-    sales_goal: request.body.sales_goal,
-  };
+  const { title, sales_goal, sales_current,  attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead } = request.body
+  // const data = {
+  //   title: request.body.title,
+  //   sales_goal: request.body.sales_goal,
+  // };
 
-  pool.query('INSERT INTO conferences_test3 (title, sales_goal, sales_current, attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17)', [data["title"], data["sales_goal"], sales_current,  attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead], (error, results) => {
+  pool.query('INSERT INTO conferences_test3 (title, sales_goal, sales_current, attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17)', [title, sales_goal, sales_current,  attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead], (error, results) => {
     if (error) {
       response.send(error)
       throw error
