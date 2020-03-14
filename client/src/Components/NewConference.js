@@ -21,8 +21,8 @@ class NewConference extends Component {
     iformz_campaign_sent: "",
     sales_lead: "",
     te_lead :"",
-    marketing_lead: "",
-    startdate: ""
+    marketing_lead: ""
+    // startdate: ""
   }
 
   onFormSubmit = (event) => {
@@ -60,13 +60,13 @@ class NewConference extends Component {
               onChange = {this.onInputChange}
             />
 
-            <label>Start Date</label>
-            <input
-              type="text"
-              value={this.state.startdate}
-              name = "startdate"
-              onChange = {this.onInputChange}
-            />
+            // <label>Start Date</label>
+            // <input
+            //   type="text"
+            //   value={this.state.startdate}
+            //   name = "startdate"
+            //   onChange = {this.onInputChange}
+            // />
 
 
             <label>Current Sales</label>
