@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import {
+	withRouter
+} from 'react-router-dom';
+
 
 class NewConference extends Component {
   state = {
@@ -34,6 +36,7 @@ class NewConference extends Component {
     }, (error) => {
       console.log(error);
     });
+    this.props.history.push('/conferences');
   }
 
 
