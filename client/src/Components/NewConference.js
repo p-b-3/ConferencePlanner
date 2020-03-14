@@ -22,12 +22,12 @@ class NewConference extends Component {
     sales_lead: "",
     te_lead :"",
     marketing_lead: ""
-    // startdate: ""
+
   }
 
   onFormSubmit = (event) => {
     event.preventDefault()
-    axios.post("/api/conferences",
+    axios.post("/api/conferences/",
     this.state).then((response) => {
     console.log(response);
 
