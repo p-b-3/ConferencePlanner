@@ -27,7 +27,7 @@ const getConferenceById = (request, response) => {
 }
 
 const createConference = (request, response) => {
-  const { title, sales_goal, sales_current,  attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead } = request.body
+  const { title, startdate, sales_goal, sales_current,  attendance_goal, attendance_current, oc_call_compelted, website_compelted, prospectus_compelted, oc_sent_all_info, contacted_industrial_attendees, competitive_events_analyzed, leads_from_competitive_events, indsutrial_oc_outreach_completed, iformz_campaign_sent, sales_lead, te_lead, marketing_lead } = request.body
   // const data = {
   //   title: request.body.title,
   //   sales_goal: request.body.sales_goal,
