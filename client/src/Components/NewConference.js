@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
 import {
-	withRouter
-} from 'react-router-dom';
+  withRouter,
+  Redirect,
+  useHistory,
+
+} from "react-router-dom";
 
 
 class NewConference extends Component {
+  let history = useHistory();
+
   state = {
     title: "",
     sales_goal: 0,
@@ -36,7 +41,9 @@ class NewConference extends Component {
     }, (error) => {
       console.log(error);
     });
+    console.log(this.props);
     // this.props.history.push('/conferences');
+    history.push("/conferences")
   }
 
 
