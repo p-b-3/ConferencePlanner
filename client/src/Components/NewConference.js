@@ -36,7 +36,7 @@ class NewConference extends Component {
     }, (error) => {
       console.log(error);
     });
-    this.props.history.push('/conferences');
+    // this.props.history.push('/conferences');
   }
 
 
