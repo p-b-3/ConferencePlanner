@@ -38,7 +38,7 @@ const createConference = (request, response) => {
       response.send(error)
       throw error
     }
-    response.status(201).send(`Conference added with ID: ${result}`)
+    response.status(201).send("Conference added succesfully")
   })
 }
 
